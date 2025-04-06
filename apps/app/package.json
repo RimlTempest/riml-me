@@ -7,33 +7,36 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint && markuplint \"**/*.{jsx,tsx}\"",
-    "lint:html": "markuplint \"**/*.{jsx,tsx}\"",
+    "lint": "eslint \"**/*.{js,jsx,ts,tsx}\" && markuplint \"**/*.{jsx,tsx}\"",
     "test": "vitest",
-    "test:watch": "vitest watch",
-    "test:coverage": "vitest run --coverage"
+    "test:coverage": "vitest run --coverage",
+    "test:ui": "vitest --ui"
   },
   "dependencies": {
+    "@riml-me/eslint-config": "workspace:*",
+    "@riml-me/vitest-config": "workspace:*",
+    "@riml-me/tailwind-config": "workspace:*",
+    "@riml-me/postcss-config": "workspace:*",
     "next": "^15.2.4",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@riml-me/biome-config": "workspace:*",
-    "@riml-me/eslint-config": "workspace:*",
-    "@riml-me/markuplint-config": "workspace:*",
-    "@riml-me/vitest-config": "workspace:*",
-    "@testing-library/jest-dom": "^6.0.0",
-    "@testing-library/react": "^14.0.0",
-    "@types/node": "^20.0.0",
-    "@types/react": "^19.0.0",
-    "@types/react-dom": "^19.0.0",
-    "autoprefixer": "^10.4.21",
-    "postcss": "^8.5.3",
-    "postcss-import": "^16.1.0",
-    "postcss-preset-env": "^10.1.5",
-    "tailwindcss": "3.4.1",
-    "typescript": "^5.3.3",
-    "vitest": "^3.1.1"
+    "@markuplint/jsx-parser": "^3.12.0",
+    "@markuplint/react-spec": "^3.12.0",
+    "@testing-library/react": "^14.2.1",
+    "@types/node": "^20.11.30",
+    "@types/react": "^18.2.67",
+    "@types/react-dom": "^18.2.22",
+    "@vitejs/plugin-react": "^4.2.1",
+    "@vitest/coverage-v8": "^1.4.0",
+    "@vitest/ui": "^1.4.0",
+    "autoprefixer": "^10.4.19",
+    "jsdom": "^24.0.0",
+    "markuplint": "^3.15.0",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.4.2",
+    "vitest": "^1.4.0"
   }
 }
