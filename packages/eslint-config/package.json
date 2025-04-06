@@ -1,0 +1,12 @@
+{
+  "name": "@riml-me/eslint-config",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "main": "index.mjs",
+  "dependencies": {
+    "@eslint/eslintrc": "^3.0.2",
+    "eslint": "^8.0.0",
+    "eslint-config-next": "^14.0.0"
+  }
+} 

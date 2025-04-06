@@ -1,0 +1,12 @@
+{
+  "name": "@riml-me/biome-config",
+  "version": "0.0.1",
+  "private": true,
+  "main": "index.json",
+  "files": [
+    "index.json"
+  ],
+  "devDependencies": {
+    "@biomejs/biome": "1.5.3"
+  }
+} 

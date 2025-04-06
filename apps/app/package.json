@@ -1,0 +1,39 @@
+{
+  "name": "@riml-me/app",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint && markuplint \"**/*.{jsx,tsx}\"",
+    "lint:html": "markuplint \"**/*.{jsx,tsx}\"",
+    "test": "vitest",
+    "test:watch": "vitest watch",
+    "test:coverage": "vitest run --coverage"
+  },
+  "dependencies": {
+    "next": "^15.2.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@riml-me/biome-config": "workspace:*",
+    "@riml-me/eslint-config": "workspace:*",
+    "@riml-me/markuplint-config": "workspace:*",
+    "@riml-me/vitest-config": "workspace:*",
+    "@testing-library/jest-dom": "^6.0.0",
+    "@testing-library/react": "^14.0.0",
+    "@types/node": "^20.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "postcss-import": "^16.1.0",
+    "postcss-preset-env": "^10.1.5",
+    "tailwindcss": "3.4.1",
+    "typescript": "^5.3.3",
+    "vitest": "^3.1.1"
+  }
+}

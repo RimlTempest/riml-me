@@ -1,0 +1,50 @@
+{
+  "parser": {
+    "\\.jsx$|\\.tsx$": "@markuplint/jsx-parser"
+  },
+  "specs": {
+    "\\.jsx$|\\.tsx$": "@markuplint/react-spec"
+  },
+  "extends": [
+    "markuplint:recommended"
+  ],
+  "rules": {
+    "attr-value-quotes": true,
+    "character-reference": true,
+    "no-duplicate-attrs": true,
+    "no-hard-code-id": true,
+    "required-attr": true,
+    "wai-aria": true,
+    "label-has-control": true,
+    "no-empty-palpable-content": true,
+    "require-accessible-name": true,
+    "required-h1": true,
+    "class-naming": "/.+/",
+    "case-sensitive-attr-name": true,
+    "case-sensitive-tag-name": true,
+    "attr-spacing": true,
+    "indentation": 2,
+    "max-line-length": 100,
+    "no-boolean-attr-value": true
+  },
+  "nodeRules": [
+    {
+      "selector": "img",
+      "rules": {
+        "required-attr": ["alt", "src"]
+      }
+    },
+    {
+      "selector": "a",
+      "rules": {
+        "required-attr": ["href"]
+      }
+    }
+  ],
+  "excludeFiles": [
+    "node_modules/**/*",
+    "dist/**/*",
+    "build/**/*",
+    ".next/**/*"
+  ]
+} 

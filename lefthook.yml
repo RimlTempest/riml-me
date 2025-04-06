@@ -1,0 +1,15 @@
+pre-commit:
+  parallel: true
+  commands:
+    eslint:
+      glob: "*.{js,jsx,ts,tsx}"
+      run: pnpm eslint {staged_files}
+    biome:
+      glob: "*.{js,jsx,ts,tsx,json}"
+      run: pnpm biome check {staged_files}
+    markuplint:
+      glob: "*.{html,jsx,tsx}"
+      run: pnpm markuplint {staged_files}
+    typescript:
+      glob: "*.{ts,tsx}"
+      run: pnpm tsc --noEmit 
