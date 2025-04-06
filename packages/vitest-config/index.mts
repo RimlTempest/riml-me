@@ -1,9 +1,14 @@
-import { defineConfig } from 'vitest/config';
 import react from '@vitejs/plugin-react';
 import tsconfigPaths from 'vite-tsconfig-paths';
+import { type UserConfig, defineConfig } from 'vitest/config';
 
-/** @type {import('./index.d.ts').createVitestConfig} */
-export const createVitestConfig = (options) => {
+export interface VitestConfigOptions {
+  setupFiles?: string[];
+  include?: string[];
+  exclude?: string[];
+}
+
+export const createVitestConfig = (options?: VitestConfigOptions): UserConfig => {
   return defineConfig({
     plugins: [tsconfigPaths(), react()],
     test: {
@@ -14,9 +19,11 @@ export const createVitestConfig = (options) => {
       setupFiles: options?.setupFiles ?? ['./setup.ts'],
     },
     css: {
-      postcss: false,
+      postcss: {
+        plugins: [],
+      },
     },
   });
 };
 
-export default createVitestConfig(); 
+export default createVitestConfig();

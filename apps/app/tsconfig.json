@@ -3,8 +3,10 @@
   "compilerOptions": {
     "plugins": [{ "name": "next" }],
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"],
+      "@riml-me/*": ["../../packages/*/index.ts"]
     },
+    "types": ["vitest/globals", "@testing-library/jest-dom"],
     "types": ["vitest/globals", "@testing-library/jest-dom"]
   },
   "include": [
